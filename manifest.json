@@ -1,0 +1,9 @@
+{
+  "name": "Victor Coach",
+  "short_name": "V.Coach",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FAF9F5",
+  "theme_color": "#1F5E3E",
+  "icons": []
+}
