@@ -4,6 +4,28 @@
    el estado actual de Store en el DOM.
    ============================================================ */
 
+const POSE_ICONS = {
+  squat: `<circle cx="20" cy="7" r="3"/><path d="M20 10v8"/><path d="M20 18l-6 4v9"/><path d="M20 18l6 4v9"/><path d="M14 22l-3-1"/><path d="M26 22l3-1"/>`,
+  lunge: `<circle cx="15" cy="7" r="3"/><path d="M15 10v7"/><path d="M15 17l-6 5v9"/><path d="M15 17l9 3 4 11"/><path d="M9 22l-3 2"/>`,
+  bridge: `<circle cx="8" cy="21" r="3"/><path d="M11 22h9"/><path d="M20 22l6-8"/><path d="M26 14l4 6"/><path d="M30 20l1 6"/><path d="M4 33h32" stroke-dasharray="2 4"/>`,
+  calf: `<circle cx="20" cy="7" r="3"/><path d="M20 10v9"/><path d="M20 19l-5 6v8"/><path d="M20 19l5 6-1 8"/><path d="M15 33l3-2"/><path d="M24 33l-1-2"/><path d="M27 24l3-5" marker-end="url(#arrow)"/>`,
+  raise: `<circle cx="12" cy="26" r="3"/><path d="M12 29l10-2"/><path d="M22 27l6 1"/><path d="M28 28l4-9"/><path d="M32 19l3 2"/><path d="M32 19l1 4"/>`,
+  balance: `<circle cx="20" cy="7" r="3"/><path d="M20 10v9"/><path d="M20 12l-7-2"/><path d="M20 12l7 3"/><path d="M20 19l0 8"/><path d="M20 27l-4 6"/><path d="M20 21l6 3 2 8"/>`,
+  step: `<rect x="24" y="26" width="10" height="7"/><circle cx="16" cy="7" r="3"/><path d="M16 10v8"/><path d="M16 18l-6 4v9"/><path d="M16 18l9 4v4"/><path d="M25 26l0-4"/>`,
+  core: `<circle cx="9" cy="15" r="3"/><path d="M12 16l9 1"/><path d="M21 17l7-5"/><path d="M21 17l6 6"/><path d="M21 17v9"/><path d="M21 26l-5 5"/><path d="M21 26l6 3"/>`,
+};
+
+const POSE_BY_EXERCISE = {
+  sentadilla: "squat", splitSquat: "lunge", puenteGluteos: "bridge", gemelos: "calf",
+  tibialis: "raise", deadBug: "core", reverseLunge: "lunge", stepUp: "step",
+  singleGlute: "bridge", gemeloUni: "calf", equilibrio: "balance", coreSinBrazo: "core",
+};
+
+function poseSvg(exId) {
+  const pose = POSE_BY_EXERCISE[exId] || "squat";
+  return `<svg class="ex-pose" viewBox="0 0 40 40" aria-hidden="true">${POSE_ICONS[pose]}</svg>`;
+}
+
 const UI = {
   fmtFecha(iso) {
     if (!iso) return "";
@@ -86,6 +108,7 @@ const UI = {
       .map(
         (ex) => `<div class="exercise-card" data-ex="${ex.id}">
           <div class="exercise-card-head">
+            ${poseSvg(ex.id)}
             <span class="exercise-name">${ex.nombre}</span>
             <span class="exercise-target">${ex.objetivo}</span>
           </div>

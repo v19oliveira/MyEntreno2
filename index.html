@@ -23,14 +23,14 @@
       <span class="nav-brand-text">Victor<br>Coach</span>
     </div>
     <ul class="nav-list">
-      <li><button class="nav-item is-active" data-section="inicio"><span class="nav-ico" aria-hidden="true">◇</span>Inicio</button></li>
-      <li><button class="nav-item" data-section="running"><span class="nav-ico" aria-hidden="true">↝</span>Running</button></li>
-      <li><button class="nav-item" data-section="fuerzaA"><span class="nav-ico" aria-hidden="true">A</span>Fuerza A</button></li>
-      <li><button class="nav-item" data-section="fuerzaB"><span class="nav-ico" aria-hidden="true">B</span>Fuerza B</button></li>
-      <li><button class="nav-item" data-section="movilidad"><span class="nav-ico" aria-hidden="true">◎</span>Movilidad</button></li>
-      <li><button class="nav-item" data-section="dieta"><span class="nav-ico" aria-hidden="true">▤</span>Dieta</button></li>
-      <li><button class="nav-item" data-section="progreso"><span class="nav-ico" aria-hidden="true">↗</span>Progreso</button></li>
-      <li><button class="nav-item" data-section="ajustes"><span class="nav-ico" aria-hidden="true">⚙</span>Ajustes</button></li>
+      <li><button class="nav-item is-active" data-section="inicio"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></span>Inicio</button></li>
+      <li><button class="nav-item" data-section="running"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="14.5" cy="4.5" r="1.8"/><path d="M9 21l2.5-5 2-2-1-4"/><path d="M6 13l4-2 2.5 2.5L17 12l3 3"/><path d="M11 12l-3 2-3-1"/></svg></span>Running</button></li>
+      <li><button class="nav-item" data-section="fuerzaA"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6"/><path d="M2 8v8"/><path d="M20 9v6"/><path d="M22 8v8"/><path d="M7 12h10"/><path d="M6 9v6"/><path d="M18 9v6"/></svg></span>Fuerza A</button></li>
+      <li><button class="nav-item" data-section="fuerzaB"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6"/><path d="M2 8v8"/><path d="M20 9v6"/><path d="M22 8v8"/><path d="M7 12h10"/><path d="M6 9v6"/><path d="M18 9v6"/></svg></span>Fuerza B</button></li>
+      <li><button class="nav-item" data-section="movilidad"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6"/><path d="M12 8l-5-2"/><path d="M12 8l5 3"/><path d="M12 13l-3 7"/><path d="M12 13l4 6"/></svg></span>Movilidad</button></li>
+      <li><button class="nav-item" data-section="dieta"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9"/><path d="M6 3v6"/><path d="M9 3v6"/><path d="M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></svg></span>Dieta</button></li>
+      <li><button class="nav-item" data-section="progreso"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V10"/><path d="M10 19V6"/><path d="M16 19v-9"/><path d="M20 19V4"/></svg></span>Progreso</button></li>
+      <li><button class="nav-item" data-section="ajustes"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H2a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H8a1.7 1.7 0 0 0 1-1.5V2a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.5 1h.2a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>Ajustes</button></li>
     </ul>
     <div class="nav-sync-state" id="navSyncState">Solo local</div>
   </nav>
@@ -39,19 +39,26 @@
 
     <!-- ===== INICIO ===== -->
     <section class="view is-active" id="view-inicio" data-view="inicio">
-      <header class="view-head">
-        <h1>Buenas, Victor</h1>
-        <p class="view-sub" id="fechaHoy"></p>
-      </header>
-
-      <div class="stat-grid">
-        <div class="stat-tile">
+      <div class="hero">
+        <svg class="hero-motif" viewBox="0 0 300 200" aria-hidden="true">
+          <path d="M-10 150 Q 60 90 130 130 T 310 90" />
+          <path d="M-10 180 Q 70 130 140 165 T 310 130" />
+          <circle cx="255" cy="55" r="30"/>
+        </svg>
+        <div class="hero-text">
+          <h1>Buenas, Victor</h1>
+          <p class="view-sub" id="fechaHoy"></p>
+        </div>
+        <div class="hero-weight">
           <label for="inPeso">Peso actual</label>
-          <div class="stat-input-row">
+          <div class="hero-weight-row">
             <input type="number" id="inPeso" step="0.1" inputmode="decimal">
             <span class="stat-unit">kg</span>
           </div>
         </div>
+      </div>
+
+      <div class="stat-grid">
         <div class="stat-tile">
           <label for="inGrasa">% grasa</label>
           <div class="stat-input-row">
@@ -59,13 +66,13 @@
             <span class="stat-unit">%</span>
           </div>
         </div>
-        <div class="stat-tile stat-tile--wide">
-          <label>Último entrenamiento</label>
-          <p class="stat-readout" id="ultimoEntreno">Sin registros todavía</p>
-        </div>
-        <div class="stat-tile stat-tile--wide">
+        <div class="stat-tile">
           <label for="inRevision">Próxima revisión</label>
           <input type="date" id="inRevision">
+        </div>
+        <div class="stat-tile stat-tile--full">
+          <label>Último entrenamiento</label>
+          <p class="stat-readout" id="ultimoEntreno">Sin registros todavía</p>
         </div>
         <div class="stat-tile stat-tile--full">
           <label for="inObjetivo">Objetivo de definición</label>
